@@ -20,12 +20,21 @@ public class MainActivity extends AppCompatActivity {
         Log.w(TAG, "This is a warn log,");
         Log.e(TAG, "This is an error log.");
 
-        Button button = (Button) findViewById(R.id.button);
+        Button butt = (Button) findViewById(R.id.Remind);
+        Button button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "Button Clicker");
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+        butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Button Clicker");
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
                 startActivity(intent);
             }
         });
